@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Femme Futures</title>
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./logo/femme futures-logos_black (1).png">
+</head>
+<body>
+    <div class="slider-body">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./images/baby girl.jpg" alt="Image 1">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/computer women.jpg" alt="Image 2">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/girl1.jpg" alt="Image 3">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/hijab girl.jpg" alt="Image 4">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/indian computer girl.jpg" alt="Image 5">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/labor women.jpg" alt="Image 6">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/poor girl.jpg" alt="Image 7">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/school girl.jpg" alt="Image 8">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/wedding-girl.jpg" alt="Image 3">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/women1.jpg" alt="Image 10">
+                    <div class="slide-text">
+                        <h1>GIRL</h1>
+                        <p class="animate-text">Get Inspired</p>
+                        <p class="animate-text">Rise</p>
+                        <p class="animate-text">Lead</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelector('.slides');
+        let slideIndex = 0;
+
+        function nextSlide(){
+            slideIndex++;
+            if(slideIndex === slides.children.length){
+                slideIndex = 0;
+            }
+            const slideWidth = slides.children[0].offsetWidth;
+            slides.style.transform=`translateX(-${slideIndex * slideWidth}px)`;
+        }
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html>

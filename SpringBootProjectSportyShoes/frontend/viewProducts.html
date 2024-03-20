@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - FF</title>
+    <link rel="stylesheet" href="viewProducts.css">
+    <link rel="icon" href="./logo/femme futures-logos_black (1).png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./logo/femme futures-logos_transparent (1).png" alt="Project Logo">
+            </div>
+            <div class="project-name">
+                <h1>Femme Futures</h1>
+            </div>
+             </form>
+            </div>
+            <ul class="menu">
+                <li><a href="./">Home</a></li>
+                <li><a href="./showSignUp">Didn't Signed up? (Sign Up Now)</a></li>
+                <li><a href="./showLogin">Already Signed up? (Login)</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <br><br><br><br><br><br> <br><br><br><br><br><br><br>
+    <h1 id="top">View Products</h1>
+    <br><br><br><br>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+        <c:forEach var="product" items="${products}">
+            <tr>
+                <td>${product.name}</td>
+                <td>${product.price}</td>
+                <td><img style="width: 150px; height: 150px" src="${product.imageUrl}" alt="${product.name}" /></td>
+            </tr>
+
+        </c:forEach>
+    </table>
+    <button>
+        <a href="#top" style="text-decoration: none; padding: 10px;
+        border: none;
+        border-radius: 50%;
+        color: blueviolet;
+        text-decoration: none;
+        font-weight: bolder;">Top of Page</a> 
+    </button>
+    </body>
+</html>

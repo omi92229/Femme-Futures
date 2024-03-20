@@ -1,0 +1,550 @@
+/* navigation style */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    /* background-color: pink; */
+    background-image: url("./images/pinkbgm.jpg");
+background-size: 100% ;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img{
+    height: 100px;
+    width: auto;
+    padding: 0 20px;
+    
+}
+
+.project-name h1{
+    font-size: 24px;
+    padding: 0 20px;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul.menu{
+    list-style: none;
+    display: flex;
+    
+}
+
+ul.menu li{
+    margin-right: 20px;
+    font-weight: bold;
+    color: brown;
+justify-content: center;
+}
+
+ul.menu li:last-child{
+    margin-right: 0;
+}
+
+ul.menu li a{
+    text-decoration: none;
+    color: brown;
+}
+
+.search-bar{
+    display: flex;
+    text-align: center;
+    flex: none;
+    justify-content: center;
+    
+}
+
+.search-bar input[type="text"]{
+    padding: 26px;
+    width: 250px;
+    border: 1px solid whitesmoke;
+    border-radius:8px 0 0 8px;
+    outline: none;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.search-bar button[type="submit"]{
+    background-color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+}
+
+.search-bar button[type="submit"] i{
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+@media screen  and (max-width: 200px) {
+    header{
+        padding: 10px;
+    }
+
+    .project-name{
+        font-size: 20px;
+    }
+
+    ul.menu{
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: pink;
+        padding: 10px 20px 10px 20px;
+    }
+
+    ul.menu li{
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+}
+
+
+/* styling for slider */
+
+.slider-body{
+/* background-color: rgba(255,192,203 , 0.5); */
+background-image: url("./images/pinkbgm.jpg");
+background-size: 100% 100%;
+
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    max-width: 75%;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slides .slide{
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.slide img{
+    width: 100%;
+    height: auto;
+}
+
+.slide-text{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+h1{
+    font-size: 24px;
+    margin: 0;
+}
+
+.animate-text{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid peachpuff;
+    animation: typing 3s steps(30) infinite;
+}
+
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+/* these styling are for accordion */
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+    padding: 10px;
+    /* background-color: purple; */
+    background-image: url("./images/pinkbadal.jpg");
+    background-size: 100% 100%;
+    
+    
+}
+
+#faqs{
+    text-align: center;
+}
+
+.accordion-item{
+    border: 1px solid grey;
+    margin-bottom: 10px;
+    border: salmon;
+    border-radius: 10px;
+    
+}
+
+.accordion-title{
+    background-color: pink;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: bold;
+    border: solid salmon;
+    border-radius: 10px;
+}
+
+.accordion-content{
+    display: none;
+    padding: 30px;
+    font-size: large;
+    /* background-color: rgba(255, 255, 0, 0.8); */
+    text-align: justify;
+    border-style: dotted;
+    background-image: url("./images/pinkrain.jpg");
+    background-size: 100% 100%;
+}
+
+.accordion-content p{
+    margin: 0;
+}
+
+/* styling for cards/blogs */
+
+.blog-card, .blog-card *{
+    margin:0;
+    padding:0;
+    
+    
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+.blog-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+    /* background-color: pink; */
+    background-image: url("./images/pinkpank.jpg");
+background-size: 100% 100%;
+}
+
+.blog-card{
+    flex: 0 1 calc(33.333% - 20px);
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.blog-card img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.blog-card h2{
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.blog-card p {
+    margin-bottom: 10px;
+}
+
+.blog-card .read-more{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orange;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.blog-card .read-more:hover{
+    background-color: cadetblue;
+    color: blue;
+    transition: ease-in-out  1000ms;
+    font-size: 110%;
+}
+
+/* styling for video */
+
+.video {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    /* background-color: pink; */
+    padding: 10px;
+    background-image: url("./images/pexels-irina-iriser-1408221.jpg");
+background-size: 100% 100%;
+}
+
+/* styling for jobs */
+
+.job-portal{
+    /* background-color: salmon; */
+    padding: 1px;
+    background-image: url("./images/pinkrain.jpg");
+background-size: 100% 100%;
+    
+}
+
+.job-listing{
+    background-color: pink;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+.job-listing h2{
+font-size: 24px;
+margin-bottom: 10px;
+color: red;
+position: relative;
+    left: 20px;
+    text-align: center;
+}
+
+.job-listing p{
+margin-bottom: 10px;
+position: relative;
+    left: 20px;
+}
+
+
+.apply-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: sandybrown;
+    color: purple;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    position: relative;
+    left: 20px;
+}
+
+.apply-button:hover {
+    background-color: greenyellow;
+    color: brown;
+}
+
+.jobpara{
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 100;
+    padding: 10px 60px 1px 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* styling for schemes */
+
+.scheme-card, .scheme-cards {
+    margin: 0;
+    padding: 0;
+    /* background-color: rgba(194, 44, 27, 0.5); */
+    
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke; /* Soft pink background */
+}
+
+.scheme-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    background-image: url("./images/auramix.jpg");
+background-size: 100% 100%;
+}
+
+.scheme-card {
+    flex: 0 1 calc(33.333% - 20px); /* Three cards per row */
+    background-color: #fff; /* White card background */
+    padding: 20px;
+    margin: 0;
+    border: 1px solid #f0e0e2; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    transition: transform 0.2s; /* Add a smooth transition effect */
+    background-image: url("./images/pinkleav.jpg");
+background-size: 100% 100%;
+}
+
+.scheme-card:hover {
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+.scheme-card img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    transition: transform 0.2s; /* Add a smooth transition effect */
+}
+
+.scheme-card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #ff69b4; /* Pink for headings */
+}
+
+.scheme-card p {
+    margin-bottom: 10px;
+    color: #555; /* Dark gray text color */
+}
+
+.scheme-card .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Pink background for the "Read More" button */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    transition: background-color 0.3s;
+}
+
+.scheme-card .read-more:hover {
+    background-color: #d2006e; /* Darker pink on hover */
+    color: #fff;
+}
+
+/* styling for footer */
+
+.contact-footer{
+    /* background-color: palevioletred; */
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("/images/aura.jpg");
+background-size: 100% 100%;
+    
+}
+
+.contact-info, .social-links, .map{
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info h3, .social-links h3, .map h3{
+    font-size: 20px;
+}
+
+.contact-info p{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.social-links a{
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.map iframe{
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border: 0;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    font-size: larger;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    font-size: larger;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    font-size: larger;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+    font-size: larger;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+    font-size: larger;
+  }
+
+  
